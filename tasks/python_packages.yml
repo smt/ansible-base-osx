@@ -1,0 +1,6 @@
+# file: roles/base_osx/tasks/python_packages.yml
+
+---
+- name: base_osx | python_packages | pip install base_osx.python_packages.requirements
+  pip: name={{ item }}
+  with_items: base_osx.python_packages.requirements

@@ -1,0 +1,136 @@
+# file: roles/base_osx/defaults/main.yml
+
+---
+base_osx:
+  # common ---------------------------------------------------------------- {{{
+  common:
+    # taps --------------------------------------------------------- {{{
+    taps:
+      - homebrew/dupes
+      - homebrew/science
+      - homebrew/versions
+      - nviennot/tmate
+      - phinze/cask
+    # /taps -------------------------------------------------------- }}}
+
+    # packages ----------------------------------------------------- {{{
+    packages:
+      - ansible
+      - aspell
+      - bitlbee
+      - brew-cask
+      - chromedriver
+      - clojure
+      - contacts
+      - coreutils
+      - cowsay
+      - csshx
+      - ctags
+      - ec2-api-tools
+      - elasticsearch
+      - elixir
+      - erlang
+      - exiftool
+      - fdupes
+      - figlet
+      - fish
+      - fortune
+      - geoip
+      - gfortran
+      - git
+      - gnu-sed
+      - go
+      - graphviz
+      - grep
+      - htop-osx
+      - imagemagick
+      - irssi
+      - john
+      - jq
+      - libgit2
+      - macvim
+      - mariadb
+      - mongodb
+      - mpc
+      - mpd
+      - msmtp
+      - mtr
+      - mutt
+      - ncdu
+      - nginx
+      - nmap
+      - node
+      - notmuch
+      - offline-imap
+      # - postgresql
+      - pypy
+      - python
+      - python3
+      - rabbitmq
+      - reattach-to-user-namespace
+      - rebar
+      - rethinkdb
+      - ruby
+      - selenium-server-standalone
+      - sqlite
+      - task
+      - the_silver_searcher
+      - tmate
+      - tmux
+      - urlview
+      - vim
+      - vimpager
+      - watchman
+      - wget
+      - wireshark
+      - xapian
+      - zeromq
+      - zsh
+    # /packages ---------------------------------------------------- }}}
+
+    # casks -------------------------------------------------------- {{{
+    casks:
+      - alfred
+      - bartender
+      - caffeine
+      - charles
+      - dropbox
+      - firefox
+      - google-chrome
+      - iterm2
+      - kindle
+      # - size-up
+      # - virtualbox
+      # - little-snitch
+    # /casks ------------------------------------------------------- }}}
+
+  # /common --------------------------------------------------------------- }}}
+
+  # python_packages ------------------------------------------------------- {{{
+  python_packages:
+    # requirements ------------------------------------------------- {{{
+    requirements:
+      - Fabric
+      - Flask
+      - Jinja2
+      - SQLAlchemy
+      - Sphinx
+      - Werkzeug
+      - boto
+      - bpython
+      - dulwich
+      - flake8
+      - hieroglyph
+      - httpie
+      - mercurial
+      - passlib
+      - pip-tools
+      - pythong
+      - requests
+      - see
+      - six
+      - uWSGI
+      - virtualenv
+      - virtualenvwrapper
+    # /requirements ------------------------------------------------ }}}
+  # /python_packages ------------------------------------------------------ }}}
