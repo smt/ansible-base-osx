@@ -1,24 +1,24 @@
 # file: roles/base_osx/tasks/common.yml
 
 ---
-- name: base_osx | common | brew update 1
+- name: common | brew update 1
   homebrew_class: update_homebrew=yes
 
-- name: base_osx | common | brew tap base_osx_common.taps
+- name: common | brew tap base_osx_common.taps
   homebrew_tap: name={{ item }} state=present
   with_items: base_osx.common.taps
 
-- name: base_osx | common | brew update 2
+- name: common | brew update 2
   homebrew_class: update_homebrew=yes
 
-- name: base_osx | common | brew install base_osx.common.packages
+- name: common | brew install base_osx.common.packages
   homebrew_class: name={{ item }} state=upgraded
   with_items: base_osx.common.packages
 
-# - name: base_osx | common | brew linkapps
+# - name: common | brew linkapps
 #   sudo: yes
 #   shell: "{{ executables.brew }} linkapps --system executable={{ executables.zsh }}"
 
-- name: base_osx | common | brew cask install base_osx.common.casks
+- name: common | brew cask install base_osx.common.casks
   homebrew_cask: name={{ item }} state=installed
   with_items: base_osx.common.casks
