@@ -92,16 +92,16 @@ base_osx:
     casks:
       - alfred
       - bartender
-      - caffeine
       - charles
       - dropbox
       - firefox
       - google-chrome
       - iterm2
       - kindle
+      # - caffeine
+      # - little-snitch
       # - size-up
       # - virtualbox
-      # - little-snitch
     # /casks ------------------------------------------------------- }}}
 
   # /common --------------------------------------------------------------- }}}
