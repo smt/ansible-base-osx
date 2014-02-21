@@ -1,4 +1,4 @@
-Role Name
+base_osx
 ========
 
 A role to set up a base OS X box.
