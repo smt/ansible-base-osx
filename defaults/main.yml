@@ -44,6 +44,7 @@ base_osx:
       - go
       - graphviz
       - grep
+      - haskell-platform
       - htop-osx
       - imagemagick
       - irssi
