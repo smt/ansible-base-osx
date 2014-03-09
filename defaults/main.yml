@@ -37,6 +37,7 @@ base_osx:
       - fish
       - fortune
       - geoip
+      - gcc49
       - gfortran
       - git
       - gnu-sed
