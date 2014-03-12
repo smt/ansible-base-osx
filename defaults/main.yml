@@ -67,8 +67,6 @@ base_osx:
       - offline-imap
       # - postgresql
       - pypy
-      - python
-      - python3
       - rabbitmq
       - reattach-to-user-namespace
       - rebar
