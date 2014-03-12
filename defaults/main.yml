@@ -53,6 +53,7 @@ base_osx:
       - libgit2
       - macvim
       - mariadb
+      - mercurial
       - mongodb
       - mpc
       - mpd
