@@ -2,17 +2,17 @@
 
 ---
 - name: common | brew update 1
-  homebrew_class: update_homebrew=yes
+  homebrew: update_homebrew=yes
 
 - name: common | brew tap base_osx_common.taps
   homebrew_tap: name={{ item }} state=present
   with_items: base_osx.common.taps
 
 - name: common | brew update 2
-  homebrew_class: update_homebrew=yes
+  homebrew: update_homebrew=yes
 
 - name: common | brew install base_osx.common.packages
-  homebrew_class: name={{ item }} state=upgraded
+  homebrew: name={{ item }} state=upgraded
   with_items: base_osx.common.packages
 
 # - name: common | brew linkapps
