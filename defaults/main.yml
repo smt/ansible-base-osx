@@ -20,6 +20,7 @@ base_osx:
       - bitlbee
       - brew-cask
       - chromedriver
+      - cloc
       - clojure
       - contacts
       - coreutils
