@@ -21,7 +21,6 @@ base_osx:
       - brew-cask
       - chromedriver
       - cloc
-      - clojure
       - contacts
       - coreutils
       - cowsay
@@ -51,6 +50,7 @@ base_osx:
       - irssi
       - john
       - jq
+      - leiningen
       - libgit2
       - macvim
       - mariadb
@@ -66,7 +66,7 @@ base_osx:
       - node
       - notmuch
       - offline-imap
-      # - postgresql
+      - postgresql
       - pypy
       - rabbitmq
       - reattach-to-user-namespace
@@ -94,13 +94,10 @@ base_osx:
     casks:
       - alfred
       - bartender
+      - caffeine
       - charles
-      - dropbox
-      - firefox
-      - google-chrome
       - iterm2
-      - kindle
-      # - caffeine
+      # - dropbox
       # - little-snitch
       # - size-up
       # - virtualbox
