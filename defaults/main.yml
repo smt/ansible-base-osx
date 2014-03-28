@@ -36,8 +36,8 @@ base_osx:
       - figlet
       - fish
       - fortune
-      - geoip
       - gcc49
+      - geoip
       - gfortran
       - git
       - gnu-sed
@@ -82,6 +82,7 @@ base_osx:
       - urlview
       - vim
       - vimpager
+      - vnstat
       - watchman
       - wget
       - wireshark
