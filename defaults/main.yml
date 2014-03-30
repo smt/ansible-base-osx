@@ -124,6 +124,7 @@ base_osx:
       - mercurial
       - passlib
       - pip-tools
+      - psdash
       - psutil
       - pythong
       - requests
