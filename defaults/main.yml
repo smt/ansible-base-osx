@@ -26,7 +26,6 @@ base_osx:
       - cowsay
       - csshx
       - ctags
-      - curl-ca-bundle
       - ec2-api-tools
       - elasticsearch
       - elixir
