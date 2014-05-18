@@ -37,7 +37,7 @@ base_osx:
       - fortune
       # - gcc49
       - geoip
-      - gfortran
+      # - gfortran
       - git
       - gnu-sed
       - go
