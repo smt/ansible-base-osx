@@ -15,10 +15,6 @@
   homebrew: name={{ item }} state=upgraded
   with_items: base_osx.common.packages
 
-# - name: common | brew linkapps
-#   sudo: yes
-#   shell: "{{ executables.brew }} linkapps --system executable={{ executables.zsh }}"
-
 - name: common | brew cask install base_osx.common.casks
   homebrew_cask: name={{ item }} state=installed
   with_items: base_osx.common.casks

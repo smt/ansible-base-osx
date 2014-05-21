@@ -35,9 +35,7 @@ base_osx:
       - figlet
       - fish
       - fortune
-      # - gcc49
       - geoip
-      # - gfortran
       - git
       - gnu-sed
       - go
