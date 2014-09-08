@@ -40,7 +40,6 @@ base_osx:
       - gnu-sed
       - go
       - graphviz
-      - haskell-platform
       - htop-osx
       - imagemagick
       - irssi
