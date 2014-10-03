@@ -37,6 +37,7 @@ base_osx:
       - fortune
       - geoip
       - git
+      - git-extras
       - gnu-sed
       - go
       - graphviz
