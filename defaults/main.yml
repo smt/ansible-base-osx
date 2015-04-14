@@ -6,98 +6,163 @@ base_osx:
   common:
     # taps --------------------------------------------------------- {{{
     taps:
+      - caskroom/fonts
       - homebrew/dupes
       - homebrew/science
       - homebrew/versions
-      - nviennot/tmate
-      - phinze/cask
+      - homebrew/homebrew-php
+      - gapple/services
+      - neovim/homebrew-neovim
+      - railwaycat/emacsmacport
     # /taps -------------------------------------------------------- }}}
-
-    # packages ----------------------------------------------------- {{{
-    packages:
-      - ansible
-      - aspell
-      - bitlbee
-      - brew-cask
-      - chromedriver
-      - cloc
-      - contacts
-      - coreutils
-      - cowsay
-      - csshx
-      - ctags
-      - ec2-api-tools
-      - elasticsearch
-      - elixir
-      - erlang
-      - exiftool
-      - fdupes
-      - figlet
-      - fish
-      - fortune
-      - geoip
-      - git
-      - git-extras
-      - gnu-sed
-      - go
-      - graphviz
-      - htop-osx
-      - imagemagick
-      - irssi
-      - john
-      - jq
-      - leiningen
-      - libgit2
-      - macvim
-      - mariadb
-      - mongodb
-      - mpc
-      - mpd
-      - msmtp
-      - mtr
-      - mutt
-      - ncdu
-      - nginx
-      - nmap
-      - node
-      - notmuch
-      - offline-imap
-      - postgresql
-      - rabbitmq
-      - reattach-to-user-namespace
-      - rebar
-      - rethinkdb
-      - ruby
-      - selenium-server-standalone
-      - sqlite
-      - task
-      - the_silver_searcher
-      - tmate
-      - tmux
-      - urlview
-      - vim
-      - vimpager
-      - vnstat
-      - watchman
-      - wget
-      - wireshark
-      - xapian
-      - zeromq
-      - zsh
-    # /packages ---------------------------------------------------- }}}
 
     # casks -------------------------------------------------------- {{{
     casks:
       - alfred
-      - bartender
-      - caffeine
+      - arq
+      - atom
       - charles
+      - chromium
+      - dash
+      - dropbox
+      - evernote
+      - firefoxdeveloperedition
+      - font-dejavu-sans-mono-for-powerline
+      - google-chrome
+      - google-chrome-canary
+      - gpgtools
       - iterm2
-      # - dropbox
-      # - little-snitch
-      # - size-up
-      # - virtualbox
+      - java
+      - java7
+      - karabiner
+      - mactex
+      - nvalt
+      - osxfuse
+      - rdio
+      - seil
+      - sequel-pro
+      - skype
+      - slack
+      - sourcetree
+      - steam
+      - vagrant
+      - vassal
+      - virtualbox
     # /casks ------------------------------------------------------- }}}
+
+    # packages ----------------------------------------------------- {{{
+    packages:
+      - ansible
+      - ant
+      - auctex
+      - autoconf
+      - automake
+      - aspell
+      - bash
+      - binutils
+      - boot2docker
+      - caskroom/cask/brew-cask
+      - chromedriver
+      - cloc
+      - clojurescript
+      - contacts
+      - coreutils
+      - cowsay
+      - cpan
+      - cpansearch
+      - csshx
+      - ctags
+      - curl
+      - dnsmasq
+      - dos2unix
+      - duplicity
+      - editorconfig
+      - emacs-mac
+      - ffmpeg
+      - findutils
+      - fish
+      - fortune
+      - geoip
+      - gcc
+      - gettext
+      - ghc
+      - git
+      - git-extras
+      - git-flow
+      - gnu-sed
+      - gnu-tar
+      - gnupg2
+      - gnutls
+      - go
+      - gpg-agent
+      - graphicsmagick
+      - graphviz
+      - gzip
+      - htop-osx
+      - iftop
+      - imagemagick
+      - irssi
+      - jpeg
+      - jq
+      - json-c
+      - ledger
+      - leiningen
+      - libgit2
+      - libressl
+      - libsass
+      - lua
+      - macvim
+      - mercurial
+      - mobile-shell
+      - mtr
+      - multitail
+      - mutt
+      - neovim
+      - newsbeuter
+      - nmap
+      - node
+      - notmuch
+      - offline-imap
+      - openssl
+      - parallel
+      - pcre
+      - pandoc
+      - perl
+      - phantomjs
+      - pstree
+      - pv
+      - pwgen
+      - qalc
+      - ranger
+      - rbenv
+      - reattach-to-user-namespace
+      - rsync
+      - rtorrent
+      - rust
+      - sassc
+      - selenium-server-standalone
+      - siege
+      - slurm
+      - socat
+      - sqlite
+      - sshfs
+      - stunnel
+      - task
+      - the_silver_searcher
+      - tig
+      - tmux
+      - todo-txt
+      - tpp
+      - tree
+      - ttyrec
+      - ttytter
+      - unrar
+      - unzip
+      - urlview
+      - vimpager
+      - watch
+      - wget
+    # /packages ---------------------------------------------------- }}}
 
   # /common --------------------------------------------------------------- }}}
 
@@ -105,28 +170,9 @@ base_osx:
   python_packages:
     # requirements ------------------------------------------------- {{{
     requirements:
-      - Fabric
-      - Flask
-      - Jinja2
-      - SQLAlchemy
-      - Sphinx
-      - Werkzeug
-      - boto
-      - bpython
-      - dulwich
       - flake8
-      - hieroglyph
       - httpie
       - mercurial
-      - passlib
-      - pip-tools
-      - psdash
-      - psutil
-      - pythong
-      - requests
-      - see
-      - six
-      - uWSGI
       - virtualenv
       - virtualenvwrapper
     # /requirements ------------------------------------------------ }}}
