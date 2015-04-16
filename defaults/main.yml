@@ -10,11 +10,115 @@ base_osx:
       - homebrew/dupes
       - homebrew/science
       - homebrew/versions
-      - homebrew/homebrew-php
       - gapple/services
-      - neovim/homebrew-neovim
       - railwaycat/emacsmacport
     # /taps -------------------------------------------------------- }}}
+
+    # packages ----------------------------------------------------- {{{
+    packages:
+      #- ansible
+      - ant
+      #- auctex
+      - autoconf
+      - automake
+      - aspell
+      - bash
+      - binutils
+      - boot2docker
+      - brew-cask
+      - chromedriver
+      - cloc
+      - clojurescript
+      - contacts
+      - coreutils
+      - cowsay
+      - cpansearch
+      - csshx
+      - ctags
+      - curl
+      - dnsmasq
+      - dos2unix
+      - duplicity
+      - editorconfig
+      - emacs-mac
+      - ffmpeg
+      - findutils
+      #- fish
+      - fortune
+      - geoip
+      - gcc
+      #- ghc
+      #- git
+      - git-extras
+      - git-flow
+      - gnu-sed
+      - gnu-tar
+      - gnupg2
+      - gnutls
+      - go
+      - graphicsmagick
+      - graphviz
+      - gzip
+      - htop-osx
+      - iftop
+      - imagemagick
+      - irssi
+      - jq
+      - json-c
+      - ledger
+      #- leiningen
+      - libressl
+      - libsass
+      - macvim
+      - mercurial
+      - mobile-shell
+      - mtr
+      - multitail
+      - mutt
+      - neovim
+      - newsbeuter
+      - nmap
+      - node
+      - notmuch
+      - offline-imap
+      - parallel
+      - pandoc
+      - perl
+      - phantomjs
+      - php56
+      - php56-mcrypt
+      - php56-xdebug
+      - pstree
+      - pv
+      - pwgen
+      - ranger
+      - reattach-to-user-namespace
+      - rsync
+      - rtorrent
+      - rust
+      - sassc
+      - selenium-server-standalone
+      - siege
+      - slurm
+      - socat
+      - sshfs
+      - stunnel
+      - task
+      - the_silver_searcher
+      - tig
+      - tmux
+      - todo-txt
+      - tpp
+      - tree
+      - ttyrec
+      - ttytter
+      - unrar
+      - unzip
+      - urlview
+      - vimpager
+      - watch
+      - wget
+    # /packages ---------------------------------------------------- }}}
 
     # casks -------------------------------------------------------- {{{
     casks:
@@ -49,120 +153,6 @@ base_osx:
       - vassal
       - virtualbox
     # /casks ------------------------------------------------------- }}}
-
-    # packages ----------------------------------------------------- {{{
-    packages:
-      - ansible
-      - ant
-      - auctex
-      - autoconf
-      - automake
-      - aspell
-      - bash
-      - binutils
-      - boot2docker
-      - caskroom/cask/brew-cask
-      - chromedriver
-      - cloc
-      - clojurescript
-      - contacts
-      - coreutils
-      - cowsay
-      - cpan
-      - cpansearch
-      - csshx
-      - ctags
-      - curl
-      - dnsmasq
-      - dos2unix
-      - duplicity
-      - editorconfig
-      - emacs-mac
-      - ffmpeg
-      - findutils
-      - fish
-      - fortune
-      - geoip
-      - gcc
-      - gettext
-      - ghc
-      - git
-      - git-extras
-      - git-flow
-      - gnu-sed
-      - gnu-tar
-      - gnupg2
-      - gnutls
-      - go
-      - gpg-agent
-      - graphicsmagick
-      - graphviz
-      - gzip
-      - htop-osx
-      - iftop
-      - imagemagick
-      - irssi
-      - jpeg
-      - jq
-      - json-c
-      - ledger
-      - leiningen
-      - libgit2
-      - libressl
-      - libsass
-      - lua
-      - macvim
-      - mercurial
-      - mobile-shell
-      - mtr
-      - multitail
-      - mutt
-      - neovim
-      - newsbeuter
-      - nmap
-      - node
-      - notmuch
-      - offline-imap
-      - openssl
-      - parallel
-      - pcre
-      - pandoc
-      - perl
-      - phantomjs
-      - pstree
-      - pv
-      - pwgen
-      - qalc
-      - ranger
-      - rbenv
-      - reattach-to-user-namespace
-      - rsync
-      - rtorrent
-      - rust
-      - sassc
-      - selenium-server-standalone
-      - siege
-      - slurm
-      - socat
-      - sqlite
-      - sshfs
-      - stunnel
-      - task
-      - the_silver_searcher
-      - tig
-      - tmux
-      - todo-txt
-      - tpp
-      - tree
-      - ttyrec
-      - ttytter
-      - unrar
-      - unzip
-      - urlview
-      - vimpager
-      - watch
-      - wget
-    # /packages ---------------------------------------------------- }}}
 
   # /common --------------------------------------------------------------- }}}
 
