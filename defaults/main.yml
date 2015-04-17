@@ -25,7 +25,6 @@ base_osx:
       - bash
       - binutils
       - boot2docker
-      - chromedriver
       - cloc
       - clojurescript
       - coreutils
@@ -73,7 +72,7 @@ base_osx:
       - mtr
       - multitail
       - mutt
-      - neovim
+      #- neovim
       - newsbeuter
       - nmap
       - node
@@ -83,9 +82,9 @@ base_osx:
       - pandoc
       - perl
       - phantomjs
-      - php56
-      - php56-mcrypt
-      - php56-xdebug
+      #- php56
+      #- php56-mcrypt
+      #- php56-xdebug
       - pstree
       - pv
       - pwgen
@@ -99,7 +98,7 @@ base_osx:
       - siege
       - slurm
       - socat
-      - sshfs
+      #- sshfs
       - stunnel
       - task
       - the_silver_searcher

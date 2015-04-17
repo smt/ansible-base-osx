@@ -3,18 +3,23 @@
 ---
 - name: common | brew update 1
   homebrew: update_homebrew=yes
+  ignore_errors: True
 
 - name: common | brew tap base_osx_common.taps
   homebrew_tap: name={{ item }} state=present
   with_items: base_osx.common.taps
+  ignore_errors: True
 
 - name: common | brew update 2
   homebrew: update_homebrew=yes upgrade_all=yes
+  ignore_errors: True
 
 - name: common | brew install base_osx.common.packages
   homebrew: name={{ item }} state=upgraded
   with_items: base_osx.common.packages
+  ignore_errors: True
 
 - name: common | brew cask install base_osx.common.casks
   homebrew_cask: name={{ item }} state=installed
   with_items: base_osx.common.casks
+  ignore_errors: True
