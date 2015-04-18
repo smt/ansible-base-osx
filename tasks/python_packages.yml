@@ -4,3 +4,4 @@
 - name: python_packages | pip install base_osx.python_packages.requirements
   pip: name={{ item }}
   with_items: base_osx.python_packages.requirements
+  ignore_errors: True
