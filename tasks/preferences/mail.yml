@@ -1,0 +1,27 @@
+---
+# mail -------------------------------------------------------------------- {{{
+- name: Disable send and reply animations in Mail.app
+  command: "{{ item }}"
+  with_items:
+    - "defaults write com.apple.mail DisableReplyAnimations -bool true"
+    - "defaults write com.apple.mail DisableSendAnimations -bool true"
+
+- name: Copy email addresses as `foo@example.com` instead of `Foo Bar <foo@example.com>` in Mail.app
+  command: "defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool false"
+
+# - name: Add the keyboard shortcut ⌘ + Enter to send an email in Mail.app
+#   command: "defaults write com.apple.mail NSUserKeyEquivalents -dict-add 'Send' -string '@\\U21a9'"
+
+- name: Display emails in threaded mode, sorted by date (oldest at the top)
+  command: "{{ item }}"
+  with_items:
+    - "defaults write com.apple.mail DraftsViewerAttributes -dict-add 'DisplayInThreadedMode' -string 'yes'"
+    - "defaults write com.apple.mail DraftsViewerAttributes -dict-add 'SortedDescending' -string 'yes'"
+    - "defaults write com.apple.mail DraftsViewerAttributes -dict-add 'SortOrder' -string 'received-date'"
+
+- name: Disable inline attachments (just show the icons)
+  command: "defaults write com.apple.mail DisableInlineAttachmentViewing -bool true"
+
+- name: Disable automatic spell checking
+  command: "defaults write com.apple.mail SpellCheckingBehavior -string 'NoSpellCheckingEnabled'"
+# /mail ------------------------------------------------------------------- }}}

@@ -1,0 +1,20 @@
+---
+# transmission ------------------------------------------------------------ {{{
+- name: Use `~/Documents/Torrents` to store incomplete downloads
+  command: "{{ item }}"
+  with_items:
+    - "defaults write org.m0k.transmission UseIncompleteDownloadFolder -bool true"
+    - "defaults write org.m0k.transmission IncompleteDownloadFolder -string '{{ smt.home }}/Documents/Torrents'"
+
+- name: Don’t prompt for confirmation before downloading
+  command: "defaults write org.m0k.transmission DownloadAsk -bool false"
+
+- name: Trash original torrent files
+  command: "defaults write org.m0k.transmission DeleteOriginalTorrent -bool true"
+
+- name: Hide the donate message
+  command: "defaults write org.m0k.transmission WarningDonate -bool false"
+
+- name: Hide the legal disclaimer
+  command: "defaults write org.m0k.transmission WarningLegal -bool false"
+# /transmission ----------------------------------------------------------- }}}

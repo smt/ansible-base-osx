@@ -1,0 +1,8 @@
+---
+# appstore ---------------------------------------------------------------- {{{
+- name: Enable the WebKit Developer Tools in the Mac App Store
+  command: "defaults write com.apple.appstore WebKitDeveloperExtras -bool true"
+
+- name: Enable Debug Menu in the Mac App Store
+  command: "defaults write com.apple.appstore ShowDebugMenu -bool true"
+# /appstore --------------------------------------------------------------- }}}

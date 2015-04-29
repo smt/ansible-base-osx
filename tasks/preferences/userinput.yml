@@ -1,0 +1,59 @@
+---
+# userinput --------------------------------------------------------------- {{{
+- name: Enable tap to click for this user and for the login screen
+  command: "{{ item }}"
+  with_items:
+    - "defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true"
+    - "defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1"
+    - "defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1"
+
+# - name: Map trackpad bottom right corner to right-click
+#   command: "{{ item }}"
+#   with_items:
+#     - "defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadCornerSecondaryClick -int 2"
+#     - "defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadRightClick -bool true"
+#     - "defaults -currentHost write NSGlobalDomain com.apple.trackpad.trackpadCornerClickBehavior -int 1"
+#     - "defaults -currentHost write NSGlobalDomain com.apple.trackpad.enableSecondaryClick -bool true"
+
+# - name: Disable natural (Lion-style) scrolling
+#   command: "defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false"
+
+- name: Increase sound quality for Bluetooth headphones/headsets
+  command: "defaults write com.apple.BluetoothAudioAgent 'Apple Bitpool Min (editable)' -int 40"
+
+- name: Enable full keyboard access for all controls
+  command: "defaults write NSGlobalDomain AppleKeyboardUIMode -int 3"
+
+- name: Use scroll gesture with the Ctrl (^) modifier key to zoom
+  command: "{{ item }}"
+  with_items:
+    - "defaults write com.apple.universalaccess closeViewScrollWheelToggle -bool true"
+    - "defaults write com.apple.universalaccess HIDScrollZoomModifierMask -int 262144"
+
+- name: Follow the keyboard focus while zoomed in
+  command: "defaults write com.apple.universalaccess closeViewZoomFollowsFocus -bool true"
+
+- name: Disable press-and-hold for keys in favor of key repeat
+  command: "defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false"
+
+- name: Set a blazingly fast keyboard repeat rate
+  command: "defaults write NSGlobalDomain KeyRepeat -int 0"
+
+- name: Set language and text formats
+  command: "{{ item }}"
+  with_items:
+    - "defaults write NSGlobalDomain AppleLanguages -array 'en'"
+    - "defaults write NSGlobalDomain AppleLocale -string 'en_US@currency=USD'"
+    - "defaults write NSGlobalDomain AppleMeasurementUnits -string 'Inches'"
+    - "defaults write NSGlobalDomain AppleMetricUnits -bool false"
+
+- name: Set the timezone
+  shell: "systemsetup -settimezone 'America/New_York' > /dev/null"
+  sudo: true
+
+- name: Disable auto-correct
+  command: "defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false"
+
+- name: Stop iTunes from responding to the keyboard media keys
+  shell: "launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist 2> /dev/null"
+# /userinput -------------------------------------------------------------- }}}

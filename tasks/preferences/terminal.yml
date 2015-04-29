@@ -1,0 +1,16 @@
+---
+# terminal ---------------------------------------------------------------- {{{
+- name: Only use UTF-8 in Terminal.app
+  command: defaults write com.apple.terminal StringEncodings -array 4
+
+# # Hover over a window and start typing in it without clicking first
+# - name: Enable “focus follows mouse” for Terminal.app and all X11 apps
+#   command: "defaults write com.apple.terminal FocusFollowsMouse -bool true"
+#   command: "defaults write org.x.X11 wm_ffm -bool true"
+
+# - name: Install the Solarized Dark theme for iTerm
+#   command: "open '{{ smt.home }}/init/Solarized Dark.itermcolors'"
+
+- name: Don’t display the annoying prompt when quitting iTerm
+  command: "defaults write com.googlecode.iterm2 PromptOnQuit -bool false"
+# /terminal --------------------------------------------------------------- }}}

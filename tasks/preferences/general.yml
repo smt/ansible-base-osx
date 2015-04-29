@@ -1,0 +1,84 @@
+---
+# general ----------------------------------------------------------------- {{{
+- name: Set standby delay to one day
+  shell: "pmset -a standbydelay 86400"
+  sudo: true
+
+- name: Disable sound effects on boot
+  shell: "nvram SystemAudioVolume=' '"
+  sudo: true
+
+- name: Disable transparency in the menu bar and elsewhere on Yosemite
+  command: "defaults write com.apple.universalaccess reduceTransparency -bool true"
+
+- name: Set highlight color to green
+  command: "defaults write NSGlobalDomain AppleHighlightColor -string '0.764700 0.976500 0.568600'"
+
+- name: Set sidebar icon size to medium
+  command: "defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 2"
+
+- name: Always show scrollbars
+  command: "defaults write NSGlobalDomain AppleShowScrollBars -string 'Always'"
+  # Possible values: `WhenScrolling`, `Automatic` and `Always`
+
+- name: Increase window resize speed for Cocoa applications
+  command: "defaults write NSGlobalDomain NSWindowResizeTime -float 0.001"
+
+- name: Expand print panel by default
+  command: "{{ item }}"
+  with_items:
+    - "defaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true"
+    - "defaults write NSGlobalDomain PMPrintingExpandedStateForPrint2 -bool true"
+
+- name: Save to disk (not to iCloud) by default
+  command: "defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false"
+
+- name: Automatically quit printer app once the print jobs complete
+  command: "defaults write com.apple.print.PrintingPrefs 'Quit When Finished' -bool true"
+
+- name: Disable the `Are you sure you want to open this Application?` dialog
+  command: "defaults write com.apple.LaunchServices LSQuarantine -bool false"
+
+- name: Remove duplicates in the `Open With` menu
+  command: "/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user"
+
+# - name: Display ASCII control characters using caret notation in standard text views
+#   command: "defaults write NSGlobalDomain NSTextShowsControlCharacters -bool true"
+
+- name: Disable Resume system-wide
+  command: "defaults write com.apple.systempreferences NSQuitAlwaysKeepsWindows -bool false"
+
+- name: Disable automatic termination of inactive apps
+  command: "defaults write NSGlobalDomain NSDisableAutomaticTermination -bool true"
+
+- name: Disable the crash reporter
+  command: "defaults write com.apple.CrashReporter DialogType -string 'none'"
+
+- name: Set help viewer windows to non-floating mode
+  command: "defaults write com.apple.helpviewer DevMode -bool true"
+
+- name: Reveal system info when clicking clock in login window
+  shell: "defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName"
+  sudo: true
+
+- name: Restart automatically if the system freezes
+  shell: "systemsetup -setrestartfreeze on"
+  sudo: true
+
+- name: Never go into computer sleep mode
+  shell: "systemsetup -setcomputersleep Off > /dev/null"
+  sudo: true
+
+- name: Check for software updates daily, not just once per week
+  command: "defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1"
+
+- name: Disable Notification Center and remove the menu bar icon
+  shell: "launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist 2> /dev/null"
+
+- name: Disable smart quotes as they’re annoying when typing code
+  command: "defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false"
+
+- name: Disable smart dashes as they’re annoying when typing code
+  command: "defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false"
+# /general ---------------------------------------------------------------- }}}
+

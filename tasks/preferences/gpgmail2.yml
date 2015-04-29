@@ -1,0 +1,5 @@
+---
+# gpgmail2 ---------------------------------------------------------------- {{{
+- name: Disable signing emails by default
+  command: "defaults write ~/Library/Preferences/org.gpgtools.gpgmail SignNewEmailsByDefault -bool false"
+# /gpgmail2 --------------------------------------------------------------- {{{

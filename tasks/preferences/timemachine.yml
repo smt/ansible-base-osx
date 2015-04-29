@@ -1,0 +1,12 @@
+---
+# timemachine ------------------------------------------------------------- {{{
+- name: Prevent Time Machine from prompting to use new hard drives as backup volume
+  command: "defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true"
+
+- name: Disable local Time Machine backups
+  shell: "{{ item }}"
+  with_items:
+    - "hash tmutil &> /dev/null"
+    - "tmutil disablelocal"
+  sudo: true
+# /timemachine ------------------------------------------------------------ }}}
