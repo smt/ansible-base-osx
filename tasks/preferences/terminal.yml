@@ -1,7 +1,7 @@
 ---
 # terminal ---------------------------------------------------------------- {{{
 - name: Only use UTF-8 in Terminal.app
-  command: defaults write com.apple.terminal StringEncodings -array 4
+  command: "defaults write com.apple.terminal StringEncodings -array 4"
 
 # # Hover over a window and start typing in it without clicking first
 # - name: Enable “focus follows mouse” for Terminal.app and all X11 apps

@@ -1,0 +1,8 @@
+---
+# iterm ------------------------------------------------------------------- {{{
+- name: Load iTerm2 preferences from custom folder
+  command: "defaults write com.googlecode.iterm2 LoadPrefsFromCustomFolder -bool true"
+
+- name: Set iTerm2 custom preferences folder path
+  command: "defaults write com.googlecode.iterm2 PrefsCustomFolder -string '{{ smt.home }}/.dotfiles/topics/iterm'"
+# /iterm ------------------------------------------------------------------ {{{

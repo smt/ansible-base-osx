@@ -11,6 +11,7 @@
 - include: preferences/mail.yml
 - include: preferences/spotlight.yml
 - include: preferences/terminal.yml
+- include: preferences/iterm.yml
 - include: preferences/timemachine.yml
 - include: preferences/activitymon.yml
 - include: preferences/utils.yml
