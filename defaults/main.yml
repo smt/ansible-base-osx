@@ -26,7 +26,7 @@ base_osx:
       - binutils
       - boot2docker
       - cloc
-      - clojurescript
+      #- clojurescript
       - coreutils
       - cowsay
       - cpansearch
@@ -66,7 +66,7 @@ base_osx:
       #- leiningen
       - libressl
       - libsass
-      - macvim
+      #- macvim
       - mercurial
       - mobile-shell
       - mtr
@@ -135,7 +135,6 @@ base_osx:
       - gpgtools
       - iterm2
       - java
-      #- java7
       - karabiner
       #- mactex
       - nvalt
@@ -147,6 +146,8 @@ base_osx:
       - slack
       - sourcetree
       - steam
+      - transmission
+      - twitter
       - vagrant
       - vassal
       - virtualbox
