@@ -16,7 +16,6 @@ base_osx:
 
     # packages ----------------------------------------------------- {{{
     packages:
-      #- ansible
       - ant
       #- auctex
       - autoconf
@@ -40,7 +39,7 @@ base_osx:
       - emacs-mac
       - ffmpeg
       - findutils
-      #- fish
+      - fish
       - fortune
       - geoip
       - gcc
@@ -112,7 +111,6 @@ base_osx:
       - unrar
       - unzip
       - urlview
-      - vimpager
       - watch
       - wget
     # /packages ---------------------------------------------------- }}}
