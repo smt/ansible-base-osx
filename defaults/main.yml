@@ -34,6 +34,7 @@ base_osx:
       - curl
       - dnsmasq
       - dos2unix
+      - dtrx
       - duplicity
       - editorconfig
       - emacs-mac
