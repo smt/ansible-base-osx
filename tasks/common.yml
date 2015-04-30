@@ -14,12 +14,18 @@
   homebrew: update_homebrew=yes upgrade_all=yes
   ignore_errors: True
 
+- local_action: osx_say msg="Installing Homebrew packages."
+
 - name: common | brew install base_osx.common.packages
   homebrew: name={{ item }} state=upgraded
   with_items: base_osx.common.packages
   ignore_errors: True
 
+- local_action: osx_say msg="Homebrew packages have been installed. Brew cask may require a super-user password."
+
 - name: common | brew cask install base_osx.common.casks
   homebrew_cask: name={{ item }} state=installed
   with_items: base_osx.common.casks
   ignore_errors: True
+
+- local_action: osx_say msg="Casks have been installed."
