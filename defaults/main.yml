@@ -94,7 +94,7 @@ base_osx:
       - reattach-to-user-namespace
       - rsync
       - rtorrent
-      - rust
+      #- rust
       - sassc
       - selenium-server-standalone
       - siege
