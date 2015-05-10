@@ -7,6 +7,7 @@ base_osx:
     # taps --------------------------------------------------------- {{{
     taps:
       - caskroom/fonts
+      - caskroom/versions
       - homebrew/dupes
       - homebrew/science
       - homebrew/versions
@@ -60,6 +61,7 @@ base_osx:
       - iftop
       - imagemagick
       - irssi
+      - jboss-as5
       - jq
       - json-c
       - ledger
@@ -134,6 +136,7 @@ base_osx:
       - gpgtools
       - iterm2
       - java
+      - java6
       - karabiner
       #- mactex
       - nvalt
