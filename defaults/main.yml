@@ -42,6 +42,7 @@ base_osx:
       - ffmpeg
       - findutils
       - fish
+      - flow
       - fortune
       - geoip
       - gcc
@@ -115,6 +116,7 @@ base_osx:
       - unzip
       - urlview
       - watch
+      - watchman
       - wget
       - wry
     # /packages ---------------------------------------------------- }}}
