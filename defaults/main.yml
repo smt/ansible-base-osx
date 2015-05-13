@@ -8,6 +8,7 @@ base_osx:
     taps:
       - caskroom/fonts
       - caskroom/versions
+      - homebrew/binary
       - homebrew/dupes
       - homebrew/science
       - homebrew/versions
@@ -92,6 +93,7 @@ base_osx:
       - pv
       - pwgen
       - ranger
+      - rar
       - reattach-to-user-namespace
       - rsync
       - rtorrent
@@ -112,13 +114,12 @@ base_osx:
       - tree
       - ttyrec
       - ttytter
-      - unrar
       - unzip
       - urlview
       - watch
       - watchman
       - wget
-      - wry
+      #- wry
     # /packages ---------------------------------------------------- }}}
 
     # casks -------------------------------------------------------- {{{
@@ -152,7 +153,6 @@ base_osx:
       - sourcetree
       - steam
       - transmission
-      - twitter
       - vagrant
       - vassal
       - virtualbox
