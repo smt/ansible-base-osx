@@ -11,6 +11,6 @@
 # - name: Install the Solarized Dark theme for iTerm
 #   command: "open '{{ smt.home }}/init/Solarized Dark.itermcolors'"
 
-- name: Don’t display the annoying prompt when quitting iTerm
-  command: "defaults write com.googlecode.iterm2 PromptOnQuit -bool false"
+# - name: Don’t display the annoying prompt when quitting iTerm
+#   command: "defaults write com.googlecode.iterm2 PromptOnQuit -bool false"
 # /terminal --------------------------------------------------------------- }}}

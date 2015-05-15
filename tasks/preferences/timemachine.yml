@@ -4,9 +4,8 @@
   command: "defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true"
 
 - name: Disable local Time Machine backups
-  shell: "{{ item }}"
+  shell: "sudo {{ item }}"
   with_items:
     - "hash tmutil &> /dev/null"
     - "tmutil disablelocal"
-  sudo: true
 # /timemachine ------------------------------------------------------------ }}}

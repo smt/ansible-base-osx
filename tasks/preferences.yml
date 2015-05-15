@@ -24,6 +24,7 @@
 
 - name: Kill affected applications (some of these changes require a logout/restart to take effect)
   shell: "killall {{ item }} > /dev/null 2<&1"
+  ignore_errors: yes
   with_items:
     - Activity Monitor
     - Address Book

@@ -9,7 +9,7 @@
 - name: Save screenshots to the desktop
   command: "defaults write com.apple.screencapture location -string '{{ smt.home }}/Desktop'"
 
-- name: Save screenshots in PNG format (other options: BMP, GIF, JPG, PDF, TIFF)
+- name: Save screenshots in PNG format (other options are BMP, GIF, JPG, PDF, TIFF)
   command: "defaults write com.apple.screencapture type -string 'png'"
 
 - name: Disable shadow in screenshots
@@ -19,6 +19,5 @@
   command: "defaults write NSGlobalDomain AppleFontSmoothing -int 2"
 
 - name: Enable HiDPI display modes (requires restart)
-  shell: "defaults write /Library/Preferences/com.apple.windowserver DisplayResolutionEnabled -bool true"
-  sudo: true
+  shell: "sudo defaults write /Library/Preferences/com.apple.windowserver DisplayResolutionEnabled -bool true"
 # /ui --------------------------------------------------------------------- }}}

@@ -1,12 +1,10 @@
 ---
 # general ----------------------------------------------------------------- {{{
 - name: Set standby delay to one day
-  shell: "pmset -a standbydelay 86400"
-  sudo: true
+  shell: "sudo pmset -a standbydelay 86400"
 
 - name: Disable sound effects on boot
-  shell: "nvram SystemAudioVolume=' '"
-  sudo: true
+  shell: "sudo nvram SystemAudioVolume=' '"
 
 - name: Disable transparency in the menu bar and elsewhere on Yosemite
   command: "defaults write com.apple.universalaccess reduceTransparency -bool true"
@@ -58,16 +56,13 @@
   command: "defaults write com.apple.helpviewer DevMode -bool true"
 
 - name: Reveal system info when clicking clock in login window
-  shell: "defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName"
-  sudo: true
+  shell: "sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName"
 
 - name: Restart automatically if the system freezes
-  shell: "systemsetup -setrestartfreeze on"
-  sudo: true
+  shell: "sudo systemsetup -setrestartfreeze on"
 
 - name: Never go into computer sleep mode
-  shell: "systemsetup -setcomputersleep Off > /dev/null"
-  sudo: true
+  shell: "sudo systemsetup -setcomputersleep Off > /dev/null"
 
 - name: Check for software updates daily, not just once per week
   command: "defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1"

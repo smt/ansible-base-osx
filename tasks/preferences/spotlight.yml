@@ -1,13 +1,11 @@
 ---
 # spotlight --------------------------------------------------------------- {{{
 - name: Hide Spotlight tray-icon (and subsequent helper)
-  shell: "chmod 600 /System/Library/CoreServices/Search.bundle/Contents/MacOS/Search"
-  sudo: true
+  shell: "sudo chmod 600 /System/Library/CoreServices/Search.bundle/Contents/MacOS/Search"
 
 # Use `sudo mdutil -i off '/Volumes/foo'` to stop indexing any volume.
 - name: Disable Spotlight indexing for any volume that gets mounted and has not yet been indexed before.
-  shell: "defaults write /.Spotlight-V100/VolumeConfiguration Exclusions -array '/Volumes'"
-  sudo: true
+  shell: "sudo defaults write /.Spotlight-V100/VolumeConfiguration Exclusions -array '/Volumes'"
 
 # Yosemite-specific search results (remove them if your are using OS X 10.9 or older):
 # MENU_DEFINITION
@@ -43,13 +41,11 @@
     '{"enabled" = 0;"name" = "MENU_SPOTLIGHT_SUGGESTIONS";}'
 
 - name: Load new settings before rebuilding the index
-  shell: "killall mds > /dev/null 2>&1"
+  shell: "sudo killall mds > /dev/null 2>&1"
 
 - name: Make sure indexing is enabled for the main volume
-  shell: "mdutil -i on / > /dev/null"
-  sudo: true
+  shell: "sudo mdutil -i on / > /dev/null"
 
 - name: Rebuild the index from scratch
-  shell: "mdutil -E / > /dev/null"
-  sudo: true
+  shell: "sudo mdutil -E / > /dev/null"
 # /spotlight -------------------------------------------------------------- }}}

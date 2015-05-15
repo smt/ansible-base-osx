@@ -48,8 +48,7 @@
     - "defaults write NSGlobalDomain AppleMetricUnits -bool false"
 
 - name: Set the timezone
-  shell: "systemsetup -settimezone 'America/New_York' > /dev/null"
-  sudo: true
+  shell: "sudo systemsetup -settimezone 'America/New_York' > /dev/null"
 
 - name: Disable auto-correct
   command: "defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false"

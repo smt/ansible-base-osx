@@ -1,6 +1,6 @@
 ---
 # safari ------------------------------------------------------------------ {{{
-- name: Privacy: don’t send search queries to Apple
+- name: Privacy - don’t send search queries to Apple
   command: "{{ item }}"
   with_items:
     - "defaults write com.apple.Safari UniversalSearchEnabled -bool false"
@@ -12,7 +12,7 @@
     - "defaults write com.apple.Safari WebKitTabToLinksPreferenceKey -bool true"
     - "defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2TabsToLinks -bool true"
 
-- name: Show the full URL in the address bar (note: this still hides the scheme)
+- name: Show the full URL in the address bar (note - this still hides the scheme)
   command: "defaults write com.apple.Safari ShowFullURLInSmartSearchField -bool true"
 
 - name: Set Safari’s home page to `about:blank` for faster loading
