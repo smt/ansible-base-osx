@@ -1,0 +1,17 @@
+---
+# dock -------------------------------------------------------------------- {{{
+- name: Show only active apps in dock
+  command: "defaults write com.apple.dock static-only -bool true"
+
+- name: Indicate hidden dock items
+  command: "defaults write com.apple.dock showhidden -bool true"
+
+- name: Auto-hide the dock
+  command: "defaults write com.apple.dock autohide -bool true"
+
+- name: Remove dock auto-hide/show delay
+  command: "{{ item }}"
+  with_items:
+    - "defaults write com.apple.dock autohide-delay -float 0"
+    - "defaults write com.apple.dock autohide-time-modifier -float 0"
+# /dock ------------------------------------------------------------------- }}}

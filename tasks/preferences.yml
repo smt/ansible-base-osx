@@ -4,9 +4,9 @@
 ---
 - include: preferences/general.yml
 - include: preferences/userinput.yml
-- include: preferences/display.yml
-- include: preferences/finder.yml
 - include: preferences/ui.yml
+- include: preferences/finder.yml
+- include: preferences/dock.yml
 - include: preferences/safari.yml
 - include: preferences/mail.yml
 - include: preferences/spotlight.yml
